@@ -1,0 +1,17 @@
+
+{% extends 'matex_app/base.html' %}
+
+{% block content %}
+<div>
+    <div class="row">
+        <div class="col-sm-11 col-md-4 mx-auto mt-5 px-3">
+            <h1 class="fw-light">Matex Application</h1>
+            <p class="fw-light">Service for Creating, Reading, Updating and Deleting Maternity Exemptions</p>
+            <div>
+                <a href="{% url 'dashboard' %}" class="btn btn-primary">Get Started Now!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
