@@ -7,18 +7,18 @@ from .forms import UserRegistrationForm
 
 
 class Index(TemplateView):
-    template_name = 'matex_app/index.html'
+    template_name = 'index.html'
 
 
 class Dashboard(View):
     def get(self, request):
-        return render(request, 'matex_app/dashboard.html')
+        return render(request, 'dashboard.html')
 
 
 class SignUpView(View):
     def get(self, request):
         form = UserRegistrationForm()
-        return render(request, 'matex_app/signup.html', {'form': form})
+        return render(request, 'signup.html', {'form': form})
 
     def post(self, request):
         form = UserRegistrationForm(request.POST)
@@ -33,4 +33,4 @@ class SignUpView(View):
             login(request, user)
             return redirect('index')
 
-        return render(request, 'matex_app/signup.html', {'form': form})
+        return render(request, 'signup.html', {'form': form})
